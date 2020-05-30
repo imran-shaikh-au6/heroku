@@ -3,19 +3,64 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
 
 <body>
+  <div class="container-fluid">
+    <div class="row">
+      <form class="col-md-4 offset-md-4 " action="/user/login" method="post"
+        style="border: 1px solid black;padding :15px;margin-top: 30px;">
+        <fieldset>
+          <legend>Register Form</legend>
+
+          <div class="form-group">
+            <label for="exampleInputEmail1">Enter Your Name</label>
+            <input type="email" name="email" class="form-control" id="exampleInputEmail1" required
+              aria-describedby="emailHelp" placeholder="Enter Your Name Here">
+
+          </div>
+          <div class="form-group row">
+            <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-5">
+              <input type="text" readonly="" class="form-control-plaintext" id="staticEmail" required
+                value="email@example.com">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email
+              address</label>
+            <input type="email" name="email" class="form-control" id="exampleInputEmail1" required
+              aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll
+              never share
+              your email with anyone
+              else.</small>
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" name="password" class="form-control" required id="exampleInputPassword1"
+              placeholder="Password">
+          </div>
+          <input class="btn btn-primary" type="submit" value="Login">
+
+          <p>If You already registed then Please Login</p>
+          <div style="padding-left: 10rem;">
+
+            <a class="btn btn-primary" href="/user/login">Login
+              Here</a>
+          </div>
+
+        </fieldset>
+      </form>
+    </div>
+  </div>
   <form action="/user/register" method="post">
-    <input type="text" name="name" required
-      placeholder="Enter Your Name">
-    <input type="email" name="email" required
-      placeholder="Enter Your Email">
-    <input type="password" name="password"
-      required placeholder="Enter Your Password">
+    <input type="text" name="name" required placeholder="Enter Your Name">
+    <input type="email" name="email" required placeholder="Enter Your Email">
+    <input type="password" name="password" required placeholder="Enter Your Password">
     <input type="submit" value="Submit">
   </form>
 </body>
